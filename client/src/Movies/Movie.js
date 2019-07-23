@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import MovieCard from './MovieCard';
 
@@ -32,7 +33,7 @@ const Movie = (props) => {
   return (
     <div className="save-wrapper">
       <MovieCard key={movie.id} movie={movie} />
-      <div className="save-button">Save</div>
+      <Link to='/movies/SavedList' className="save-button">Save</Link>
     </div>
   )
 }
